@@ -1,0 +1,33 @@
+.donghdd00342-layout-transparent {
+  background: url('../images/111.jpg') center / cover;
+}
+.donghdd00342-layout-transparent .mdl-layout__header,
+.donghdd00342-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. //color: rgba(0,0,0,0.87);//color: white;//*/
+  color: rgba(0,0,0,0.87);  
+}
+.myTable {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 13px;
+    text-align: left;
+}
+.myTable td {    
+    height: 48px;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    padding: 12px 28px;
+    box-sizing: border-box;
+}
+.myTable tr:hover {
+    background-color: rgba(0,0,0,.06);
+    box-shadow: 10px 10px 15px rgba(0,0,0,.03);
+    cursor: pointer;
+}
+#mp3Player {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+}
