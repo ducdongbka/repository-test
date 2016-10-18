@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/soundmanager2.js"></script>
+        <script>
+        soundManager.setup({
+        // where to find the SWF files, if needed
+        //url: '/path/to/swf-directory/',
+        onready: function() {
+        // SM2 has loaded, API ready to use e.g., createSound() etc.
+        document.getElementsByTagName("body")[0].style.visibility = "visible";
+        //document.getElementsByTagName("UL")
+        },
+        ontimeout: function() {
+        // Uh-oh. No HTML5 support, SWF missing, Flash blocked or other issue
+        }
+        });
+        /*
+        threeSixtyPlayer.config = {
+        playNext: false, // stop after one sound, or play through list until end
+        autoPlay: false, // start playing the first sound right away
+        allowMultiple: true, // let many sounds play at once (false = one at a time)
+        loadRingColor: '#ccc',// amount of sound which has loaded
+        playRingColor: '#000', // amount of sound which has played
+        backgroundRingColor: '#eee', // "default" color shown underneath everything else
+        animDuration: 500,
+        animTransition: Animator.tx.bouncy// http://www.berniecode.com/writing/animator.html
+        }*/
+        </script>
+        <style>
+        body {
+            visibility: hidden;
+        }
+        .ui360,
+        .sm2-360ui {
+        /* size of the container for the circle, etc. */
+        width:50px;
+        height:50px;
+        }
+        </style>
+    </head>
+    <body>
+    <button onclick="soundManager._writeDebug('Demo 1',1);var mySound = soundManager.createSound({url: 'http://www.w3schools.com/html/horse.mp3'});mySound.play()">Do this</button>
+<!--//http://www.w3schools.com/html/horse.mp3-->
+    <div class="ui360">
+    <a href="http://www.w3schools.com/html/horse.mp3">play "an.mp3"</a>
+    </div>
+
+    <div class="ui360">
+    <-- dynamically-inserted block -->
+    <div class="ui">
+    <canvas class="sm2-canvas"></canvas>
+    <span class="sm2-360btn"></span> 
+    <div class="sm2-timing"></div>
+    <div class="sm2-cover"></div>
+    </div>
+    <-- /UI -->
+    <a href="http://www.w3schools.com/html/horse.mp3">
+    </div>
+
+    </body>
+</html>
